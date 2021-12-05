@@ -7,4 +7,4 @@ If you wish to post, you must sign up and create an account. Once you have done 
 Click this link to see: https://pure-badlands-01668.herokuapp.com/
 
 ### Homepage
-![Homepage](./homepage.jpg)
+![Homepage](./homepage.JPG)
