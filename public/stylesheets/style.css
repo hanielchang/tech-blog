@@ -1,8 +1,48 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --primary: #ccdad1;
+  --secondary: #9caea9;
+  --tertiary: #788585;
+  --light-dark: #6f6866;
+  --dark: #38302e;
+  --border-radius: .3rem;
+}
 
-body, html {
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.app-title {
+  font-size: 3rem;
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 0 10px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px var(--light-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.25;
+}
+
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -12,9 +52,10 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #fff5eb;
   font-weight: bold;
   transition: color .1s;
+  margin-left: 20px;
 }
 
 a:hover {
@@ -75,17 +116,48 @@ form label {
 }
 
 header {
+  background-color: var(--dark);
+  width: 100%;
   border-bottom: 1px solid #ccc;
-  display: flex;
+  display: block;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
 }
 
-header h1 {
-  font-size: 1em;
+.single-post {
+  background-color: var(--dark);
+  border-radius: 10px;
+  color:#fff5eb;
+  margin: 20px;
+  padding: 20px 0 20px 0;
 }
 
+.single-post div {
+  margin-left: 20px;
+}
+
+.personal-post {
+  background-color: var(--dark);
+  border-radius: 10px;
+}
+
+.personal-post div {
+  padding-top: 10px;
+  color: #fff5eb;
+  margin-left: 20px;
+}
+
+header h1 {
+  font-size: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  margin-bottom: 20px;
+}
 main {
   flex: 1;
   padding: 2% 4%;
@@ -97,7 +169,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #fff5eb;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -125,12 +197,14 @@ main {
 .post .title span {
   font-style: italic;
   font-size: 90%;
-  color: #7d7d7d;
+  color: #fff5eb;
 }
 
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
+  margin-left: 20px;
+  padding-bottom: 20px;
 }
 
 .upvote-btn {
@@ -148,11 +222,13 @@ main {
 
 .comment {
   padding: 1%;
+  border-radius: 10px;
   margin-bottom: 1%;
+  background-color: #fff5eb;
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: #c2bebc;
 }
 
 .comment .meta {
@@ -161,8 +237,31 @@ main {
   opacity: .6;
 }
 
+.comments div {
+  /* background-color: var(--light-dark); */
+}
+
+.new-post-form {
+  background-color: #c2bebc;
+  border-radius: 10px;
+}
+
 .new-post-form input {
   width: 300px;
+  margin-left: 30px;
+}
+
+.new-post-form label {
+  padding-top: 10px;
+  margin-left: 30px;
+}
+
+.new-post-form button {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.your-posts h2 {
+  margin-top: 50px;
 }
 
 .edit-post-form {
