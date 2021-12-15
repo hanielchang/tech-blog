@@ -1,4 +1,6 @@
+
 async function loginFormHandler(event) {
+
   event.preventDefault();
 
   const email = document.querySelector('#email-login').value.trim();
@@ -13,13 +15,14 @@ async function loginFormHandler(event) {
       }),
       headers: { 'Content-Type': 'application/json' }
     });
-
+    
     if (response.ok) {
       document.location.replace('/dashboard/');
     } else {
       alert("Invalid password or username!");
     }
   }
+
 }
 
 async function signupFormHandler(event) {
@@ -49,5 +52,4 @@ async function signupFormHandler(event) {
 }
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
