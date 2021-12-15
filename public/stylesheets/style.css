@@ -207,15 +207,6 @@ main {
   padding-bottom: 20px;
 }
 
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
 .comment-form {
   margin-bottom: 5%;
 }
