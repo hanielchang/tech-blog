@@ -3,14 +3,19 @@
 
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label for="post-title">What is the Title?</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
+
     <div>
-      <label for="post-url">Link</label>
+      <label for="post-url">Give a valid link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn">Create</button>
+
+    <div class="note">
+      Note: If you wish, you have the option to delete a post you do not want, or update it!
+    </div>
+    <button type="submit" class="btn">Create Post</button>
   </form>
 </section>
 
@@ -21,7 +26,7 @@
     {{#each posts as |post|}}
     <li class="personal-post">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
     {{/each}}
   </ol>

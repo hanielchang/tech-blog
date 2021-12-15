@@ -8,6 +8,7 @@
   --light-dark: #6f6866;
   --dark: #38302e;
   --border-radius: .3rem;
+  --blue: #4485cf;
 }
 
 body {
@@ -113,6 +114,11 @@ form label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.note {
+  margin-left: 20px;
+  font-weight: bold;
 }
 
 header {
@@ -225,11 +231,18 @@ main {
 .comment .meta {
   font-size: 90%;
   margin-bottom: .5%;
-  opacity: .6;
 }
 
-.comments div {
-  /* background-color: var(--light-dark); */
+.comment-box {
+  padding: 1%;
+  border-radius: 10px;
+  background-color: var(--blue);
+}
+
+.login-description {
+  font-size: larger;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 10px 150px 30px 50px;
 }
 
 .new-post-form {
@@ -257,12 +270,4 @@ main {
 
 .edit-post-form {
   margin-bottom: 5%;
-}
-
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
 }
