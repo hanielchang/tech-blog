@@ -4,8 +4,9 @@ async function editFormHandler(event) {
   const postTitle = 'input[name="post-title"]';
   const title = document.querySelector(postTitle).value.trim();
   // Index id of post is usually located at the end of the URL, hence why we do length - 1
-  const index_id = window.location.toString().split('/').length - 1;
-  const id = window.location.toString().split('/')[index_id];
+  const URL = window.location.toString();
+  const index_id = URL.split('/').length - 1;
+  const id = URL.split('/')[index_id];
   const postsAPI = `/api/posts/${id}`;
 
   const response = await fetch(postsAPI, {
@@ -25,4 +26,5 @@ async function editFormHandler(event) {
   }
 }
 
-document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+const saveBtn = '.edit-post-form';
+document.querySelector(saveBtn).addEventListener('submit', editFormHandler);
