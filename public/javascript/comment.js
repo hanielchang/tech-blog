@@ -1,13 +1,15 @@
 async function commentFormHandler(event) {
   event.preventDefault();
 
-  const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
-  const post_id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-  ];
+  const commentBody = 'textarea[name="comment-body"]';
+  const comment_text = document.querySelector(commentBody).value.trim();
+  // Index id of post is usually located at the end of the URL, hence why we do length - 1
+  const index_id = window.location.toString().split('/').length - 1;
+  const post_id = window.location.toString().split('/')[index_id];
+  const commentsAPI = '/api/comments';
 
   if (comment_text) {
-    const response = await fetch('/api/comments', {
+    const response = await fetch(commentsAPI, {
       method: 'POST',
       body: JSON.stringify({
         post_id,
